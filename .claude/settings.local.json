@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(cd contracts && forge install OpenZeppelin/openzeppelin-contracts-upgradeable)",
+      "Bash(forge build 2>&1 | head -50)",
+      "Bash(forge build 2>&1)",
+      "Bash(forge build --sizes | grep VotingSystem)",
+      "Bash(find contracts/artifacts -name \"*.json\" 2>/dev/null | head -10)",
+      "Bash(forge test --match-contract VotingSystemTest 2>&1 | head -100)",
+      "Bash(forge test --match-contract VotingSystemTest 2>&1)",
+      "Bash(git add .gitmodules .env.example .gitignore CLAUDE.md README.md cache/ contracts/ docs/ foundry.lock foundry.toml frontend/)"
+    ]
+  }
+}
